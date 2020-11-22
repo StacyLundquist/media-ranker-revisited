@@ -8,8 +8,12 @@ class UsersController < ApplicationController
     render_404 unless @user
   end
 
-  def login_form
+  def create
+    auth_hash = request.env["omniauth.auth"]
+    raise
   end
+
+  def login_form; end
 
   def login
     username = params[:username]
